@@ -1,0 +1,465 @@
+[
+    {
+        "id": "f37e469f.6344c8",
+        "type": "tab",
+        "label": "自動洗手台",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3e11bccd.52fd44",
+        "type": "mqtt-broker",
+        "name": "Mosquitto",
+        "broker": "140.127.196.39",
+        "port": "18883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9e253195.a496a",
+        "type": "ui_tab",
+        "name": "自動洗手台",
+        "icon": "dashboard",
+        "order": 4,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "97a7dd0e.47386",
+        "type": "ui_group",
+        "name": "總流量",
+        "tab": "9e253195.a496a",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ab5c210fe5135816",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "51f97a49.7f0384",
+        "type": "ui_group",
+        "name": "水庫",
+        "tab": "9e253195.a496a",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "980a7c0b.62db3",
+        "type": "ui_group",
+        "name": "control_led",
+        "tab": "9e253195.a496a",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "0d3b62555305a254",
+        "type": "linetoken",
+        "name": "自動洗手台"
+    },
+    {
+        "id": "22f9ec4a.8a4bd4",
+        "type": "mqtt in",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "topic": "nine/total",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "3e11bccd.52fd44",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 160,
+        "y": 320,
+        "wires": [
+            [
+                "634e6fbf.c2899",
+                "cf845e28.5929c",
+                "5100de84.a489e",
+                "7109e08fee7abaf2"
+            ]
+        ]
+    },
+    {
+        "id": "634e6fbf.c2899",
+        "type": "debug",
+        "z": "f37e469f.6344c8",
+        "name": "MQTT",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 370,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "cf845e28.5929c",
+        "type": "ui_text",
+        "z": "f37e469f.6344c8",
+        "group": "97a7dd0e.47386",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "<font size = 4>總流量 : ",
+        "format": "{{msg.payload}}ml",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 450,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5100de84.a489e",
+        "type": "ui_gauge",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "group": "97a7dd0e.47386",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "gtype": "donut",
+        "title": "",
+        "label": "ml",
+        "format": "{{value | number:1}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 390,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7109e08fee7abaf2",
+        "type": "ui_chart",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "group": "97a7dd0e.47386",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "紀錄",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 470,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3836f9b870dcff6b",
+        "type": "ui_button",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "group": "51f97a49.7f0384",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "clear",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "1",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 290,
+        "y": 40,
+        "wires": [
+            [
+                "60d393a48dc1358d"
+            ]
+        ]
+    },
+    {
+        "id": "ccde3c168a029c24",
+        "type": "ui_text",
+        "z": "f37e469f.6344c8",
+        "group": "51f97a49.7f0384",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "<font size = 4>水庫目前",
+        "format": "{{msg.payload}}ml",
+        "layout": "row-left",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": "",
+        "color": "#000000",
+        "x": 470,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "43c09cd294060290",
+        "type": "mqtt in",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "topic": "nine/reservoir",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "3e11bccd.52fd44",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "ccde3c168a029c24",
+                "8f9658d29837ae56"
+            ]
+        ]
+    },
+    {
+        "id": "60d393a48dc1358d",
+        "type": "mqtt out",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "topic": "nine/touch",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e11bccd.52fd44",
+        "x": 510,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b1d798e1616c5310",
+        "type": "template",
+        "z": "f37e469f.6344c8",
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "需補水!!\n水量過少: {{payload}} ",
+        "output": "str",
+        "x": 650,
+        "y": 180,
+        "wires": [
+            [
+                "6ab37660463cd8f0"
+            ]
+        ]
+    },
+    {
+        "id": "6ab37660463cd8f0",
+        "type": "line-notify",
+        "z": "f37e469f.6344c8",
+        "name": "resevoir. Exceed Notify",
+        "message": "",
+        "contentType": "message",
+        "imageThumbnail": "",
+        "imageUrl": "",
+        "sticker": "default",
+        "stickerPackageId": "1",
+        "stickerId": "1",
+        "silent": false,
+        "creds": "0d3b62555305a254",
+        "x": 840,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8f9658d29837ae56",
+        "type": "switch",
+        "z": "f37e469f.6344c8",
+        "name": "Check resevoir",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "lt",
+                "v": "200",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 420,
+        "y": 160,
+        "wires": [
+            [
+                "b1d798e1616c5310"
+            ]
+        ]
+    }
+]
